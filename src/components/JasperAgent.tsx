@@ -129,11 +129,9 @@ export const JasperAgent: React.FC = () => {
     setError(null);
     setIsConnecting(true);
     try {
-      if (!process.env.GEMINI_API_KEY) {
-        throw new Error("API Key not found. Please ensure GEMINI_API_KEY is set.");
-      }
-
-      const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+      // Replace 'YOUR_KEY_HERE' with your actual key from Google AI Studio
+        const apiKey = import.meta.env.VITE_GEMINI_API_KEY || "AIzaSyBjtar1rCMvV0zO6X7-Zu0_HLVUExhUrEY";
+        const ai = new GoogleGenAI({ apiKey });
       
       const sessionPromise = ai.live.connect({
         model: "gemini-2.5-flash-native-audio-preview-09-2025",
