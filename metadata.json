@@ -1,0 +1,8 @@
+{
+  "name": "JASPER-AI AGENT",
+  "description": "An interactive real-time AI agent interface for Jasper, powered by Gemini Live API with Vision and Audio capabilities.",
+  "requestFramePermissions": [
+    "microphone",
+    "camera"
+  ]
+}
